@@ -1,0 +1,10 @@
+const FINEAMOUNT_INR = {
+	bike: 200,
+	car: 400,
+	bus: 600,
+	truck: 800
+}
+
+const CAMERA_DISTANCE_IN_METRES = 1000
+
+export { FINEAMOUNT_INR, CAMERA_DISTANCE_IN_METRES }
