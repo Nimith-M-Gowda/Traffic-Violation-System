@@ -46,11 +46,11 @@ export const handler = ((vehicleId: string, locationId: string) => {
 
 		// Step 4 : Based on above speeding calculate how many times speed violation taken place
 		const TotalMistakeCount = getTotalViolationCount(SpeedInfo)
-		console.log('TotalMistakeCount', TotalMistakeCount)
+		console.log('TotalMistakeCount :', TotalMistakeCount)
 
 		//Step 5 : calculates fine amount based on speed violation
 		const fineAmount = calculateFineToBePaid(vehicleType, TotalMistakeCount)
-		console.log('fineAmount', fineAmount)
+		console.log('fineAmount :', fineAmount)
 
 		//Step 6 : If there is any fine amount, then SMS user
 		SMSOwner(
