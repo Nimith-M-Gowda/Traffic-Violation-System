@@ -169,22 +169,23 @@ export const calculateFineToBePaid = (
 /**
  *
  * @param vehicleNumber string
- * @param phnumber string
+ * @param phoneNumber string
  * @param fineAmount number
  * @param totalViolationCount number
  */
 export const SMSOwner = (
 	vehicleNumber: string,
-	phnumber: string,
+	phoneNumber: string,
 	fineAmount: number,
-	totalViolationCount: number
+	totalViolationCount: number,
+	locationId: string
 ) => {
 	console.log('-------------------S M S-------------------------------')
 	console.log(
-		`Hi ${phnumber} This message is from Department of Traffic Police`
+		`Hi ${phoneNumber} This message is from Department of Traffic Police`
 	)
 	console.log(
-		` Your Vehicle ${vehicleNumber} crossed the speedlimit ${totalViolationCount} time/times`
+		` Your Vehicle ${vehicleNumber} crossed the speedlimit ${totalViolationCount} time/times in ${locationId}`
 	)
 	console.log(`please pay the fine amount of ${fineAmount} Thanks You`)
 }

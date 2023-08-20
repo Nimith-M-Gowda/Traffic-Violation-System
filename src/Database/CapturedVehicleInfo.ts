@@ -39,7 +39,7 @@ const captured_VehicleData = [
 		vehicleId: 'KA18EK7172',
 		locationId: 'BrigadeRoad',
 		timeStamp1: '1692466073',
-		timeStamp2: '1692466134'
+		timeStamp2: '1692466132'
 	}
 ]
 

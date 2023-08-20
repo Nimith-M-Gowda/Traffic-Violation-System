@@ -15,14 +15,6 @@ import {
  */
 export const handler = ((vehicleId: string, locationId: string) => {
 	try {
-		const { vehicleType, ownerPhoneNumber } = getVehicleInfo(vehicleId)
-		// console.log(
-		// 	'vehicleType:',
-		// 	vehicleType,
-		// 	'ownerPhoneNumber:',
-		// 	ownerPhoneNumber
-		// )
-
 		const gettrafficViolatedVehicleData = getCapturedVehicleViolationData(
 			vehicleId,
 			locationId
@@ -30,6 +22,14 @@ export const handler = ((vehicleId: string, locationId: string) => {
 		// console.log(
 		// 	'gettrafficViolatedVehicleData :',
 		// 	gettrafficViolatedVehicleData
+		// )
+
+		const { vehicleType, ownerPhoneNumber } = getVehicleInfo(vehicleId)
+		// console.log(
+		// 	'vehicleType:',
+		// 	vehicleType,
+		// 	'ownerPhoneNumber:',
+		// 	ownerPhoneNumber
 		// )
 
 		const SpeedInfo = gettrafficViolatedVehicleData.map(eachViolatedData => {
@@ -54,7 +54,13 @@ export const handler = ((vehicleId: string, locationId: string) => {
 
 		const fineAmount = calculateFineToBePaid(vehicleType, TotalMistakeCount)
 		// console.log('fineAmount :', fineAmount)
-		SMSOwner(vehicleId, ownerPhoneNumber, fineAmount, TotalMistakeCount)
+		SMSOwner(
+			vehicleId,
+			ownerPhoneNumber,
+			fineAmount,
+			TotalMistakeCount,
+			locationId
+		)
 	} catch (_err) {
 		const error = _err as Error
 		console.log(error.message)
