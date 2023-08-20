@@ -36,7 +36,8 @@ export const calculateSpeed = (time: number) => {
 /**
  *
  * @param vehicleId String
- * @returns Object : queries RTO DB and returns vwhicle_Type and Owner_Phone_Number
+ * @returns Object : queries RTO DB and returns vehicle_Type and Owner_Phone_Number
+ * @description Query for vehicleType and OwnerPhoneNumber from RTO DB
  */
 export const getVehicleInfo = (vehicleId: string) => {
 	try {
@@ -83,6 +84,7 @@ export const getLocationSpeedLimit = (
  * @param vehicleId String
  * @param locationId String
  * @returns Object : captured violation data
+ * @description Query for all Camera-CapturedData from DB for particular VehicleID
  */
 export const getCapturedVehicleViolationData = (
 	vehicleId: string,
@@ -106,6 +108,7 @@ export const getCapturedVehicleViolationData = (
  * @param timeStamp1 String
  * @param timeStamp2 String
  * @returns Number : speed of a vehicle in kms / hr
+ * @description Calculate Speed for a given vehicle and query for Speed limit in the particular location from DB
  */
 export const getVehicleSpeed = (timeStamp1: string, timeStamp2: string) => {
 	const time1 = parseInt(timeStamp1)
@@ -129,6 +132,7 @@ export const getVehicleSpeed = (timeStamp1: string, timeStamp2: string) => {
  *
  * @param SpeedInfo object
  * @returns Number : total number of times the Vehicle crossed the Speed Limit
+ * @description Based on speeding calculate how many times speed violation taken place
  */
 export const getTotalViolationCount = (
 	SpeedInfo: { locationSpeedLimitData: number; vehicleSpeed: number }[]
@@ -151,6 +155,7 @@ export const getTotalViolationCount = (
  * @param vehicleType 'bike' | 'car' | 'bus' | 'truck'
  * @param totalViolationCount number
  * @returns Number : Total amount to be paid
+ * @description calculates fine amount based on speed violation
  */
 export const calculateFineToBePaid = (
 	vehicleType: 'bike' | 'car' | 'bus' | 'truck',
@@ -172,6 +177,7 @@ export const calculateFineToBePaid = (
  * @param phoneNumber string
  * @param fineAmount number
  * @param totalViolationCount number
+ * @description  If there is any fine amount, then SMS user
  */
 export const SMSOwner = (
 	vehicleNumber: string,
