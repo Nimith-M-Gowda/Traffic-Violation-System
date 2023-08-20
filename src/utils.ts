@@ -1,6 +1,6 @@
-import { RTO_vehicleInfo } from './database/RTO'
-import { captured_VehicleData } from './database/capturedVehicleInfo'
-import { SpeedLimitData } from './database/speedLimit'
+import { RTO_vehicleInfo } from './Database/Rto'
+import { captured_VehicleData } from './Database/CapturedVehicleInfo'
+import { SpeedLimitData } from './Database/SpeedLimit'
 import { CAMERA_DISTANCE_IN_METRES, FINEAMOUNT_INR } from './constants'
 
 /**

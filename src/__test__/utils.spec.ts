@@ -1,12 +1,12 @@
 import {
-	convertToKmsPerHr,
+	calculateFineToBePaid,
 	calculateSpeed,
-	getVehicleInfo,
-	getLocationSpeedLimit,
+	convertToKmsPerHr,
 	getCapturedVehicleViolationData,
-	getVehicleSpeed,
+	getLocationSpeedLimit,
 	getTotalViolationCount,
-	calculateFineToBePaid
+	getVehicleInfo,
+	getVehicleSpeed
 } from '../utils'
 
 describe('test util functions', () => {
