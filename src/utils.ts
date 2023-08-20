@@ -168,7 +168,7 @@ export const calculateFineToBePaid = (
 
 /**
  *
- * @param vehicleNumber number
+ * @param vehicleNumber string
  * @param phnumber string
  * @param fineAmount number
  * @param totalViolationCount number
