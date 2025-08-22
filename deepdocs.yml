@@ -4,4 +4,6 @@ target:
 reinit: "unique-string-to-force-refresh-2"
 
 include:
-  - "src"
+  - "src/**/*.ts"
+  - "src/**/*.tsx"
+  - "src/*.ts" 
