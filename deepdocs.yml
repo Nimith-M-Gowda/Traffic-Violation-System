@@ -1,0 +1,7 @@
+target:
+  - url: "docs/test.md"
+
+reinit: "unique-string-to-force-refresh-2"
+
+include:
+  - "src"
